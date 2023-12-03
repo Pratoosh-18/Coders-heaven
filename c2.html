@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="pythonpractice.css">
+    <link rel="stylesheet" href="questionpage.css">
+    <title>Coders Heaven-Practice Python</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo1.png" alt="logo" height="75px">   
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/">About</a> </li>
+                    <li> <a href="/">Contact us</a> </li>
+                    <a href="login.html">
+                        <button class="login">Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item learn">
+            <img class="menu-logo" src="learn.png" alt="" height="30px">
+            <a href="index.html">Learn</a> 
+        </div>
+        <div class="menu-item practice">
+            <img class="menu-logo" src="practice.png" alt="" height="30px">
+            <a class="page-name" href="practice.html">Practice-C</a> 
+        </div>
+        <div class="menu-item ide">
+            <img class="menu-logo" src="ide.png" alt="" height="30px">
+            <a href="">IDE</a> 
+        </div>
+        <div class="menu-item live-classes">
+            <img class="menu-logo" src="live.png" alt="" height="32px">
+            <a href="">Live classes</a> 
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="box-question">Question 2 .Given an array arr[] of size N, the task is to find the largest element in the given array. </p>
+        <p class="box-answer-name">Answer:</p>
+        <div class="box-answer-box">
+
+            <pre class="box-answer">
+                
+                // C program to find maximum in arr[] of size n
+                
+                
+                // Function to find maximum in arr[] of size n
+                int largest(int arr[], int n)
+                {
+                    int i;
+                
+                    // Initialize maximum element
+                    int max = arr[0];
+                
+                    // Traverse array elements from second and
+                    // compare every element with current max
+                    for (i = 1; i < n; i++)
+                        if (arr[i] > max)
+                            max = arr[i];
+                
+                    return max;
+                }
+                
+                // Driver code
+                int main()
+                {
+                    int arr[] = { 10, 324, 45, 90, 9808 };
+                    int n = sizeof(arr) / sizeof(arr[0]);
+                
+                    // Function call
+                    printf("Largest in given array is %d", largest(arr, n));
+                    return 0;
+                }
+                
+                
+                
+                <button class="copybutton">Copy Code</button>
+            </pre>
+        </div>
+    </div>
+
+    <div class="pre-next-pages">
+        <p>
+            <pre>
+                &#8592;<a href="c1.html">Previous Question</a>                                                                                                                                                                             <a class="next-question" href="c3.html">Next Question</a>&#8594;
+            </pre>
+        </p>
+    </div>
+
+    <footer>
+        <p>
+            Privacy Policy | Terms of Service
+        </p>
+        <p>
+            &copy Copyright - Pratoosh Garg 
+        </p>
+        <p>
+            Code Your Way To Success
+        </p>
+
+    </footer>
+
+</body>
+</html>

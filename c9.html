@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="pythonpractice.css">
+    <link rel="stylesheet" href="questionpage.css">
+    <title>Coders Heaven-Practice Python</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo1.png" alt="logo" height="75px">   
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/">About</a> </li>
+                    <li> <a href="/">Contact us</a> </li>
+                    <a href="login.html">
+                        <button class="login">Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item learn">
+            <img class="menu-logo" src="learn.png" alt="" height="30px">
+            <a href="index.html">Learn</a> 
+        </div>
+        <div class="menu-item practice">
+            <img class="menu-logo" src="practice.png" alt="" height="30px">
+            <a class="page-name" href="practice.html">Practice-C</a> 
+        </div>
+        <div class="menu-item ide">
+            <img class="menu-logo" src="ide.png" alt="" height="30px">
+            <a href="">IDE</a> 
+        </div>
+        <div class="menu-item live-classes">
+            <img class="menu-logo" src="live.png" alt="" height="32px">
+            <a href="">Live classes</a> 
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="box-question">Question 9 . Find maximum occurring character in a string</p>
+        <p class="box-answer-name">Answer:</p>
+        <div class="box-answer-box">
+
+            <pre class="box-answer">
+                
+                    // Function to find the maximum occurring character
+                    char getMaxOccurringChar(char str[])
+                    {
+                        // Create a hash table (unordered_map) to store the
+                        // frequency of each character
+                        int count[256] = { 0 };
+                    
+                        // Traverse the string and update the frequency of each
+                        // character
+                        int length = strlen(str);
+                        for (int i = 0; i < length; i++)
+                            count[(int)str[i]]++;
+                    
+                        // Find the character with the maximum frequency
+                        char maxChar;
+                        int maxCount = 0;
+                        for (int i = 0; i < length; i++) {
+                            if (count[(int)str[i]] > maxCount) {
+                                maxCount = count[(int)str[i]];
+                                maxChar = str[i];
+                            }
+                        }
+                    
+                        return maxChar;
+                    }
+                    
+                    // Driver Code
+                    int main()
+                    {
+                        char str[] = "sample string";
+                        printf("Max occurring character is: %c\n",
+                            getMaxOccurringChar(str));
+                        return 0;
+                    }
+                    
+                
+                <button class="copybutton">Copy Code</button>
+            </pre>
+        </div>
+    </div>
+
+    <div class="pre-next-pages">
+        <p>
+            <pre>
+                &#8592;<a href="c8.html">Previous Question</a>                                                                                                                                                                             <a class="next-question" href="c10.html">Next Question</a>&#8594;
+            </pre>
+        </p>
+    </div>
+
+    <footer>
+        <p>
+            Privacy Policy | Terms of Service
+        </p>
+        <p>
+            &copy Copyright - Pratoosh Garg 
+        </p>
+        <p>
+            Code Your Way To Success
+        </p>
+
+    </footer>
+
+</body>
+</html>

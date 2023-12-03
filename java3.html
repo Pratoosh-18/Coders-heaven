@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="pythonpractice.css">
+    <link rel="stylesheet" href="questionpage.css">
+    <title>Coders Heaven-Practice Python</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo1.png" alt="logo" height="75px">   
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/">About</a> </li>
+                    <li> <a href="/">Contact us</a> </li>
+                    <a href="login.html">
+                        <button class="login">Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item learn">
+            <img class="menu-logo" src="learn.png" alt="" height="30px">
+            <a href="index.html">Learn</a> 
+        </div>
+        <div class="menu-item practice">
+            <img class="menu-logo" src="practice.png" alt="" height="30px">
+            <a class="page-name" href="practice.html">Practice-Java</a> 
+        </div>
+        <div class="menu-item ide">
+            <img class="menu-logo" src="ide.png" alt="" height="30px">
+            <a href="">IDE</a> 
+        </div>
+        <div class="menu-item live-classes">
+            <img class="menu-logo" src="live.png" alt="" height="32px">
+            <a href="">Live classes</a> 
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="box-question">Question 3 .Given two matrices, the task is to multiply them. Matrices can either be square or rectangular:</p>
+        <p class="box-answer-name">Answer:</p>
+        <div class="box-answer-box">
+
+            <pre class="box-answer">
+                
+                // C++ program to multiply two matrices 
+
+                import java.io.*; 
+                import java.util.*; 
+                
+                class GFG { 
+                
+                    static int R1 = 2; // number of rows in Matrix-1 
+                    static int C1 = 2; // number of columns in Matrix-1 
+                    static int R2 = 2; // number of rows in Matrix-2 
+                    static int C2 = 2; // number of columns in Matrix-2 
+                
+                    // This function multiplies mat1[][] 
+                    // and mat2[][], and stores the result 
+                    // in res[][] 
+                    static void mulMat(int[][] mat1, int[][] mat2) 
+                    { 
+                        // To store result 
+                        int[][] rslt = new int[R1][C2]; 
+                        System.out.println( 
+                            "Multiplication of given two matrices is:"); 
+                        int i, j, k; 
+                        for (i = 0; i < R1; i++) { 
+                            for (j = 0; j < C2; j++) { 
+                                rslt[i][j] = 0; 
+                                for (k = 0; k < R2; k++) 
+                                    rslt[i][j] += mat1[i][k] * mat2[k][j]; 
+                                System.out.print(rslt[i][j] + " "); 
+                            } 
+                            System.out.println(""); 
+                        } 
+                    } 
+                
+                    // Driver code 
+                    public static void main(String[] args) 
+                    { 
+                        int[][] mat1 = { { 1, 1 }, 
+                                        { 2, 2 } }; 
+                
+                        int[][] mat2 = { { 1, 1 }, 
+                                        { 2, 2 } }; 
+                
+                
+                        if (C1 != R2) { 
+                            System.out.println( 
+                                "The number of columns in Matrix-1 must be equal to the number of rows in Matrix-2"); 
+                            System.out.println( 
+                                "Please update the global variables according to your array dimension"); 
+                        } 
+                        else { 
+                            
+                            // Function call 
+                            mulMat(mat1, mat2); 
+                        } 
+                    } 
+                } 
+                // This code is contributed by shruti456rawal
+                
+                }
+                
+                <button class="copybutton">Copy Code</button>
+            </pre>
+        </div>
+    </div>
+
+    <div class="pre-next-pages">
+        <p>
+            <pre>
+                &#8592;<a href="java2.html">Previous Question</a>                                                                                                                                                                             <a class="next-question" href="java4.html">Next Question</a>&#8594;
+            </pre>
+        </p>
+    </div>
+
+    <footer>
+        <p>
+            Privacy Policy | Terms of Service
+        </p>
+        <p>
+            &copy Copyright - Pratoosh Garg 
+        </p>
+        <p>
+            Code Your Way To Success
+        </p>
+
+    </footer>
+
+</body>
+</html>

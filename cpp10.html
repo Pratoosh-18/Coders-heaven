@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <!-- <link rel="stylesheet" href="pythonpractice.css"> -->
+    <link rel="stylesheet" href="questionpage.css">
+    <title>Coders Heaven-Practice Python</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo1.png" alt="logo" height="75px">   
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/">About</a> </li>
+                    <li> <a href="/">Contact us</a> </li>
+                    <a href="login.html">
+                        <button class="login">Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item learn">
+            <img class="menu-logo" src="learn.png" alt="" height="30px">
+            <a href="index.html">Learn</a> 
+        </div>
+        <div class="menu-item practice">
+            <img class="menu-logo" src="practice.png" alt="" height="30px">
+            <a class="page-name" href="practice.html">Practice-C++</a> 
+        </div>
+        <div class="menu-item ide">
+            <img class="menu-logo" src="ide.png" alt="" height="30px">
+            <a href="">IDE</a> 
+        </div>
+        <div class="menu-item live-classes">
+            <img class="menu-logo" src="live.png" alt="" height="32px">
+            <a href="">Live classes</a> 
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="box-question">Question 10 . Check if given strings are rotations of each other or not.</p>
+        <p class="box-answer-name">Answer:</p>
+        <div class="box-answer-box">
+
+            <pre class="box-answer">
+                // C++ program for the above approach
+
+                using namespace std;
+                bool checkString(string& s1, string& s2, int indexFound,
+				int Size)
+                {
+                    for (int i = 0; i < Size; i++) {
+                        // check whether the character is equal or not
+                        if (s1[i] != s2[(indexFound + i) % Size])
+                            return false;
+                        // %Size keeps (indexFound+i) in bounds, since it
+                        // ensures it's value is always less than Size
+                    }
+
+                    return true;
+                }
+
+                int main()
+                {
+
+                    string s1 = "abcd";
+                    string s2 = "cdab";
+
+                    if (s1.length() != s2.length()) {
+                        cout << "s2 is not a rotation on s1" << endl;
+                    }
+                    else {
+                            // store occurrences of the first character of s1
+                            vector< int> indexes;
+
+                            int Size = s1.length();
+
+                            char firstChar = s1[0];
+
+                            for (int i = 0; i < Size; i++) {
+                                if (s2[i] == firstChar) {
+                                    indexes.push_back(i);
+                            }
+                        }
+
+                            bool isRotation = false;
+
+                            // check if the strings are rotation of each other
+                            // for every occurrence of firstChar in s2
+                            for (int idx : indexes) {
+                                isRotation = checkString(s1, s2, idx, Size);
+
+                                if (isRotation)
+                                    break;
+                        }
+
+                            if (isRotation)
+                                cout << "Strings are rotations of each other"
+                                    << endl;
+                            else
+                                cout
+                                    << "Strings are not rotations of each other"
+                                    << endl;
+                    }
+                    return 0;
+                }
+
+                <button class="copybutton">Copy Code</button>
+            </pre>
+        </div>
+    </div>
+
+    <div class="pre-next-pages">
+        <p>
+            <pre>
+                &#8592;<a href="cpp9.html">Previous Question</a>                                                                                                                                                                             <a class="next-question" href="">Next Question</a>&#8594;
+            </pre>
+        </p>
+    </div>
+
+    <footer>
+        <p>
+            Privacy Policy | Terms of Service
+        </p>
+        <p>
+            &copy Copyright - Pratoosh Garg 
+        </p>
+        <p>
+            Code Your Way To Success
+        </p>
+
+    </footer>
+
+</body>
+</html>

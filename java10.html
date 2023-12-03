@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="pythonpractice.css">
+    <link rel="stylesheet" href="questionpage.css">
+    <title>Coders Heaven-Practice Python</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo1.png" alt="logo" height="75px">   
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/">About</a> </li>
+                    <li> <a href="/">Contact us</a> </li>
+                    <a href="login.html">
+                        <button class="login">Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item learn">
+            <img class="menu-logo" src="learn.png" alt="" height="30px">
+            <a href="index.html">Learn</a> 
+        </div>
+        <div class="menu-item practice">
+            <img class="menu-logo" src="practice.png" alt="" height="30px">
+            <a class="page-name" href="practice.html">Practice-Java</a> 
+        </div>
+        <div class="menu-item ide">
+            <img class="menu-logo" src="ide.png" alt="" height="30px">
+            <a href="">IDE</a> 
+        </div>
+        <div class="menu-item live-classes">
+            <img class="menu-logo" src="live.png" alt="" height="32px">
+            <a href="">Live classes</a> 
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="box-question">Question 10 .Check if given strings are rotations of each other or not. </p>
+        <p class="box-answer-name">Answer:</p>
+        <div class="box-answer-box">
+
+            <pre class="box-answer">
+                // Java program for the above approach
+
+                    import java.util.*;
+                    
+                    class GFG {
+                        static boolean check_rotation(String s, String goal)
+                    {
+                        if (s.length() != goal.length())
+                            return false;
+                
+                        Queue< Character> q1 = new LinkedList<>();
+                        for (int i = 0; i < s.length(); i++) {
+                            q1.add(s.charAt(i));
+                        }
+                
+                        Queue< Character> q2 = new LinkedList<>();
+                        for (int i = 0; i < goal.length(); i++) {
+                            q2.add(goal.charAt(i));
+                        }
+                
+                        int k = goal.length();
+                        while (k > 0) {
+                            k--;
+                            char ch = q2.peek();
+                            q2.remove();
+                            q2.add(ch);
+                            if (q2.equals(q1))
+                                return true;
+                        }
+                
+                        return false;
+                    }
+                
+                        // Driver code
+                        public static void main(String[] args)
+                    {
+                        String str1 = "AACD";
+                        String str2 = "ACDA";
+                
+                        // Function call
+                        if (check_rotation(str1, str2))
+                            System.out.println(
+                                "Strings are rotations of each other");
+                        else
+                            System.out.printf(
+                                "Strings are not rotations of each other");
+                    }
+                }
+                
+                <button class="copybutton">Copy Code</button>
+            </pre>
+        </div>
+    </div>
+
+    <div class="pre-next-pages">
+        <p>
+            <pre>
+                &#8592;<a href="java9.html">Previous Question</a>                                                                                                                                                                             <a class="next-question" href="">Next Question</a>&#8594;
+            </pre>
+        </p>
+    </div>
+
+    <footer>
+        <p>
+            Privacy Policy | Terms of Service
+        </p>
+        <p>
+            &copy Copyright - Pratoosh Garg 
+        </p>
+        <p>
+            Code Your Way To Success
+        </p>
+
+    </footer>
+
+</body>
+</html>

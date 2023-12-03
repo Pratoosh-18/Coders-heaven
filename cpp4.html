@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <!-- <link rel="stylesheet" href="pythonpractice.css"> -->
+    <link rel="stylesheet" href="questionpage.css">
+    <title>Coders Heaven-Practice Python</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo1.png" alt="logo" height="75px">   
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/">About</a> </li>
+                    <li> <a href="/">Contact us</a> </li>
+                    <a href="login.html">
+                        <button class="login">Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item learn">
+            <img class="menu-logo" src="learn.png" alt="" height="30px">
+            <a href="index.html">Learn</a> 
+        </div>
+        <div class="menu-item practice">
+            <img class="menu-logo" src="practice.png" alt="" height="30px">
+            <a class="page-name" href="practice.html">Practice-C++</a> 
+        </div>
+        <div class="menu-item ide">
+            <img class="menu-logo" src="ide.png" alt="" height="30px">
+            <a href="">IDE</a> 
+        </div>
+        <div class="menu-item live-classes">
+            <img class="menu-logo" src="live.png" alt="" height="32px">
+            <a href="">Live classes</a> 
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="box-question">Question 4 . Given two matrices, the task is to multiply them. Matrices can either be square or rectangular:</p>
+        <p class="box-answer-name">Answer:</p>
+        <div class="box-answer-box">
+
+            <pre class="box-answer">
+                
+                // C++ program to multiply two matrices 
+                #include &lt;iostream&gt;
+                    using namespace std; 
+
+                    // Edit MACROs here, according to your Matrix Dimensions for 
+                    // mat1[R1][C1] and mat2[R2][C2] 
+                    #define R1 2 // number of rows in Matrix-1 
+                    #define C1 2 // number of columns in Matrix-1 
+                    #define R2 2 // number of rows in Matrix-2 
+                    #define C2 2 // number of columns in Matrix-2 
+
+                    void mulMat(int mat1[][C1], int mat2[][C2]) 
+                    { 
+                        int rslt[R1][C2]; 
+
+                        cout << "Multiplication of given two matrices is:\n"; 
+
+                        for (int i = 0; i < R1; i++) { 
+                            for (int j = 0; j < C2; j++) { 
+                                rslt[i][j] = 0; 
+
+                                for (int k = 0; k < R2; k++) { 
+                                    rslt[i][j] += mat1[i][k] * mat2[k][j]; 
+                                } 
+
+                                cout << rslt[i][j] << "\t"; 
+                            } 
+
+                            cout << endl; 
+                        } 
+                    } 
+
+                    // Driver code 
+                    int main() 
+                    { 
+                        // R1 = 4, C1 = 4 and R2 = 4, C2 = 4 (Update these 
+                        // values in MACROs) 
+                        int mat1[R1][C1] = { { 1, 1 }, 
+                                            { 2, 2 } }; 
+
+                        int mat2[R2][C2] = { { 1, 1 }, 
+                                            { 2, 2 } }; 
+
+                        if (C1 != R2) { 
+                            cout << "The number of columns in Matrix-1 must "
+                                    "be equal to the number of rows in "
+                                    "Matrix-2"
+                                << endl; 
+                            cout << "Please update MACROs according to your "
+                                    "array dimension in #define section"
+                                << endl; 
+
+                            exit(EXIT_FAILURE); 
+                        } 
+
+                        // Function call 
+                        mulMat(mat1, mat2); 
+
+                        return 0; 
+                    } 
+
+
+                <button class="copybutton">Copy Code</button>
+            </pre>
+        </div>
+    </div>
+
+    <div class="pre-next-pages">
+        <p>
+            <pre>
+                &#8592;<a href="cpp3.html">Previous Question</a>                                                                                                                                                                             <a class="next-question" href="cpp5.html">Next Question</a>&#8594;
+            </pre>
+        </p>
+    </div>
+
+    <footer>
+        <p>
+            Privacy Policy | Terms of Service
+        </p>
+        <p>
+            &copy Copyright - Pratoosh Garg 
+        </p>
+        <p>
+            Code Your Way To Success
+        </p>
+
+    </footer>
+
+</body>
+</html>

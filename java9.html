@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="pythonpractice.css">
+    <link rel="stylesheet" href="questionpage.css">
+    <title>Coders Heaven-Practice Python</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo1.png" alt="logo" height="75px">   
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/">About</a> </li>
+                    <li> <a href="/">Contact us</a> </li>
+                    <a href="login.html">
+                        <button class="login">Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item learn">
+            <img class="menu-logo" src="learn.png" alt="" height="30px">
+            <a href="index.html">Learn</a> 
+        </div>
+        <div class="menu-item practice">
+            <img class="menu-logo" src="practice.png" alt="" height="30px">
+            <a class="page-name" href="practice.html">Practice-Java</a> 
+        </div>
+        <div class="menu-item ide">
+            <img class="menu-logo" src="ide.png" alt="" height="30px">
+            <a href="">IDE</a> 
+        </div>
+        <div class="menu-item live-classes">
+            <img class="menu-logo" src="live.png" alt="" height="32px">
+            <a href="">Live classes</a> 
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="box-question">Question 9 .Remove characters from the first string which are present in the second string. </p>
+        <p class="box-answer-name">Answer:</p>
+        <div class="box-answer-box">
+
+            <pre class="box-answer">
+                    // Java program to remove duplicates, the order of
+                    // characters is not maintained in this program
+                    
+                    public class GFG {
+                        static final int NO_OF_CHARS = 256;
+                    
+                            /* Returns an array of size 256 containing count
+                            of characters in the passed char array */
+                            static int[] getCharCountArray(String str)
+                        {
+                                    int count[] = new int[NO_OF_CHARS];
+                                    for (int i = 0; i < str.length(); i++)
+                                        count[str.charAt(i)]++;
+                            
+                                    return count;
+                        }
+                        
+                                /* removeDirtyChars takes two 
+                                string as arguments: First
+                                string (str) is the one from 
+                                where function removes
+                                dirty characters. Second 
+                                string is the string which
+                                contain all dirty characters
+                                which need to be removed
+                                from first string */
+                                static String removeDirtyChars(String str,
+                                                    String mask_str)
+                            {
+                                    int count[] = getCharCountArray(mask_str);
+                                    int ip_ind = 0, res_ind = 0;
+                            
+                                    char arr[] = str.toCharArray();
+                            
+                                    while (ip_ind != arr.length)
+                                {
+                                    char temp = arr[ip_ind];
+                                    if (count[temp] == 0) {
+                                        arr[res_ind] = arr[ip_ind];
+                                        res_ind++;
+                                    }
+                                    ip_ind++;
+                            }
+                    
+                                    str = new String(arr);
+                            
+                                    /* After above step string is ngring.
+                                    Removing extra "iittg" after string*/
+                            
+                                    return str.substring(0, res_ind);
+                        }
+                    
+                                    // Driver Code
+                                    public static void main(String[] args)
+                        {
+                                    String str = "geeksforgeeks";
+                                    String mask_str = "mask";
+                                    System.out.println(removeDirtyChars(str, mask_str));
+                        }
+                    }
+                    
+                
+                <button class="copybutton">Copy Code</button>
+            </pre>
+        </div>
+    </div>
+
+    <div class="pre-next-pages">
+        <p>
+            <pre>
+                &#8592;<a href="java8.html">Previous Question</a>                                                                                                                                                                             <a class="next-question" href="java10.html">Next Question</a>&#8594;
+            </pre>
+        </p>
+    </div>
+
+    <footer>
+        <p>
+            Privacy Policy | Terms of Service
+        </p>
+        <p>
+            &copy Copyright - Pratoosh Garg 
+        </p>
+        <p>
+            Code Your Way To Success
+        </p>
+
+    </footer>
+
+</body>
+</html>

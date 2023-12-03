@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="pythonpractice.css">
+    <link rel="stylesheet" href="questionpage.css">
+    <title>Coders Heaven-Practice Python</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo1.png" alt="logo" height="75px">   
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/">About</a> </li>
+                    <li> <a href="/">Contact us</a> </li>
+                    <a href="login.html">
+                        <button class="login">Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item learn">
+            <img class="menu-logo" src="learn.png" alt="" height="30px">
+            <a href="index.html">Learn</a> 
+        </div>
+        <div class="menu-item practice">
+            <img class="menu-logo" src="practice.png" alt="" height="30px">
+            <a class="page-name" href="practice.html">Practice-Java</a> 
+        </div>
+        <div class="menu-item ide">
+            <img class="menu-logo" src="ide.png" alt="" height="30px">
+            <a href="">IDE</a> 
+        </div>
+        <div class="menu-item live-classes">
+            <img class="menu-logo" src="live.png" alt="" height="32px">
+            <a href="">Live classes</a> 
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="box-question">Question 5 .Find the majority element in the array. A majority element in an array A[] of size n is an element that appears more than n/2 times (and hence there is at most one such element). </p>
+        <p class="box-answer-name">Answer:</p>
+        <div class="box-answer-box">
+
+            <pre class="box-answer">
+                
+                // Java program to find Majority
+                // element in an array
+
+                    import java.io.*;
+
+                    class GFG {
+
+                                // Function to find Majority element
+                                // in an array
+                                static void findMajority(int arr[], int n)
+                                {
+                                    int maxCount = 0;
+                                    int index = -1; // sentinels
+                                    for (int i = 0; i < n; i++) {
+                                        int count = 0;
+                                        for (int j = 0; j < n; j++) {
+                                            if (arr[i] == arr[j])
+                                                count++;
+                                }
+
+                                     // update maxCount if count of
+                                     // current element is greater
+                                     if (count > maxCount) {
+                                            maxCount = count;
+                                            index = i;
+                                }
+                            }
+
+                                     // if maxCount is greater than n/2
+                                    // return the corresponding element
+                                        if (maxCount > n / 2)
+                                            System.out.println(arr[index]);
+
+                                        else
+                                            System.out.println("No Majority Element");
+                        }
+
+                                // Driver code
+                                public static void main(String[] args)
+                        {
+
+                                        int arr[] = { 1, 1, 2, 1, 3, 5, 1 };
+                                        int n = arr.length;
+
+                                        // Function calling
+                                        findMajority(arr, n);
+                        }
+                        // This code is contributed by ajit.
+                    }
+
+                }
+                
+                <button class="copybutton">Copy Code</button>
+            </pre>
+        </div>
+    </div>
+
+    <div class="pre-next-pages">
+        <p>
+            <pre>
+                &#8592;<a href="java4.html">Previous Question</a>                                                                                                                                                                             <a class="next-question" href="java6.html">Next Question</a>&#8594;
+            </pre>
+        </p>
+    </div>
+
+    <footer>
+        <p>
+            Privacy Policy | Terms of Service
+        </p>
+        <p>
+            &copy Copyright - Pratoosh Garg 
+        </p>
+        <p>
+            Code Your Way To Success
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="pythonpractice.css">
+    <link rel="stylesheet" href="questionpage.css">
+    <title>Coders Heaven-Practice Python</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <img src="logo1.png" alt="logo" height="75px">   
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/">About</a> </li>
+                    <li> <a href="/">Contact us</a> </li>
+                    <a href="login.html">
+                        <button class="login">Login/Signup</button>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item learn">
+            <img class="menu-logo" src="learn.png" alt="" height="30px">
+            <a href="index.html">Learn</a> 
+        </div>
+        <div class="menu-item practice">
+            <img class="menu-logo" src="practice.png" alt="" height="30px">
+            <a class="page-name" href="practice.html">Practice-C</a> 
+        </div>
+        <div class="menu-item ide">
+            <img class="menu-logo" src="ide.png" alt="" height="30px">
+            <a href="">IDE</a> 
+        </div>
+        <div class="menu-item live-classes">
+            <img class="menu-logo" src="live.png" alt="" height="32px">
+            <a href="">Live classes</a> 
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="box-question">Question 8 . C Program to Sort an array of names or strings</p>
+        <p class="box-answer-name">Answer:</p>
+        <div class="box-answer-box">
+
+            <pre class="box-answer">
+               
+                    // Defining comparator function as per the requirement 
+                    static int myCompare(const void* a, const void* b) 
+                    { 
+                    
+                        // setting up rules for comparison 
+                        return strcmp(*(const char**)a, *(const char**)b); 
+                    } 
+                    
+                    // Function to sort the array 
+                    void sort(const char* arr[], int n) 
+                    { 
+                        // calling qsort function to sort the array 
+                        // with the help of Comparator 
+                        qsort(arr, n, sizeof(const char*), myCompare); 
+                    } 
+                    
+                    int main() 
+                    { 
+                    
+                        // Get the array of names to be sorted 
+                        const char* arr[] 
+                            = { "geeksforgeeks", "geeksquiz", "clanguage" }; 
+                    
+                        int n = sizeof(arr) / sizeof(arr[0]); 
+                        int i; 
+                    
+                        // Print the given names 
+                        printf("Given array is\n"); 
+                        for (i = 0; i < n; i++) 
+                            printf("%d: %s \n", i, arr[i]); 
+                    
+                        // Sort the given names 
+                        sort(arr, n); 
+                    
+                        // Print the sorted names 
+                        printf("\nSorted array is\n"); 
+                        for (i = 0; i < n; i++) 
+                            printf("%d: %s \n", i, arr[i]); 
+                    
+                        return 0; 
+                    } 
+                    
+                
+                <button class="copybutton">Copy Code</button>
+            </pre>
+        </div>
+    </div>
+
+    <div class="pre-next-pages">
+        <p>
+            <pre>
+                &#8592;<a href="c7.html">Previous Question</a>                                                                                                                                                                             <a class="next-question" href="c9.html">Next Question</a>&#8594;
+            </pre>
+        </p>
+    </div>
+
+    <footer>
+        <p>
+            Privacy Policy | Terms of Service
+        </p>
+        <p>
+            &copy Copyright - Pratoosh Garg 
+        </p>
+        <p>
+            Code Your Way To Success
+        </p>
+
+    </footer>
+
+</body>
+</html>
